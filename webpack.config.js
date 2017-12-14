@@ -1,22 +1,30 @@
-const webpack = require('webpack');
-const path = require('path');
+var path = require('path');
 
 module.exports = {
   entry: './src/entry.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
         exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['react', 'es2015', 'stage-1'] }
+        }]
       },
     ]
-  }
+  },
+  devServer: {
+    host: 'localhost',
+    port: 5000,
+    historyApiFallback: true,
+    contentBase: './dist',
+    open: true,
+    openPage: '', // <== Add this
+  },
 };
