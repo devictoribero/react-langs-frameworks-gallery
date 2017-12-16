@@ -1,4 +1,5 @@
 import React from 'react';
+import TopNavigator from './components/TopNavigator';
 import ListCardContainer from './containers/ListCardContainer';
 
 class App extends React.Component {
@@ -68,8 +69,11 @@ class App extends React.Component {
 	render () {
 		return (
       <React.Fragment>
-        <ListCardContainer {...this.state.languages.frontend} />
-        <ListCardContainer {...this.state.languages.backend} />
+        <TopNavigator />
+        <main>
+          <ListCardContainer {...this.state.languages.frontend} />
+          <ListCardContainer {...this.state.languages.backend} />
+        </main>
       </React.Fragment>
 		);
 	}
