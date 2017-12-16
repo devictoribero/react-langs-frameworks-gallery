@@ -6,6 +6,8 @@ import Card from './Card';
 const List = glamorous.ul({
   margin: 0,
   padding: 0,
+  display: 'flex',
+  flexWrap: 'wrap',
 });
 
 

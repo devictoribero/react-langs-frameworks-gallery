@@ -1,7 +1,6 @@
 import React from 'react';
 import ListCardContainer from './containers/ListCardContainer';
 
-
 class App extends React.Component {
   constructor( props ) {
 		super( props );
@@ -26,6 +25,41 @@ class App extends React.Component {
               description: 'Hibrid and flexible. The best language in the world'
             },
           ],
+        },
+        backend: {
+          title: 'Backend ',
+          items: [
+            {
+              id: 1,
+              title: 'PHP',
+              description: 'Interpreted language to buld small or medium apps'
+            },
+            {
+              id: 2,
+              title: 'Ruby',
+              description: 'Open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.'
+            },
+            {
+              id: 3,
+              title: 'Javascript',
+              description: 'Hibrid and flexible. The best language in the world'
+            },
+            {
+              id: 4,
+              title: 'Python',
+              description: 'Python is a programming language that lets you work quickly and integrate systems more effectively'
+            },
+            {
+              id: 5,
+              title: 'Java',
+              description: 'The king of POO in backend'
+            },
+            {
+              id: 6,
+              title: '.NET',
+              description: 'Hibrid and flexible. The best language in the world'
+            },
+          ],
         }
       },
     };
@@ -33,9 +67,10 @@ class App extends React.Component {
 
 	render () {
 		return (
-			<div>
+      <React.Fragment>
         <ListCardContainer {...this.state.languages.frontend} />
-			</div>
+        <ListCardContainer {...this.state.languages.backend} />
+      </React.Fragment>
 		);
 	}
 }

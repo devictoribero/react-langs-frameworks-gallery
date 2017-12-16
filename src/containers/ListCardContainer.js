@@ -6,6 +6,7 @@ import HeaderList from '../components/HeaderList';
 
 const Container = glamorous.section({
   margin: 0,
+  marginBottom: '20px',
   padding: 0,
 });
 
