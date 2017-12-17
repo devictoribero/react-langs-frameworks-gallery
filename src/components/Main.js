@@ -7,7 +7,7 @@ const Main = () => (
   <main>
     <Switch>
       <Route path={'/'} component={Home} />
-      <Route path={'/languages'} component={Languages} languages={this.state.languages}/>
+      <Route path={'/languages'} component={Languages} />
     </Switch>
   </main>
 )

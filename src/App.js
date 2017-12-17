@@ -72,8 +72,10 @@ class App extends React.Component {
 	render () {
 		return (
       <BrowserRouter>
-        <TopNavigator />
-        <Main />
+        <React.Fragment>
+          <TopNavigator />
+          <Main />
+        </React.Fragment>
       </BrowserRouter>
 		);
 	}
