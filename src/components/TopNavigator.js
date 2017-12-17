@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 import glamorous from 'glamorous';
 
 const Container = glamorous.nav({
@@ -9,7 +9,7 @@ const Container = glamorous.nav({
   background: '#2B3A42',
 });
 
-const Link = glamorous.a({
+const ListItem = glamorous.li({
   display: 'inline-block',
   marginRight: '10px',
   color: '#ffffff',
@@ -28,8 +28,15 @@ const Link = glamorous.a({
 const TopNavigator = () => {
   return(
     <Container>
-      <Link selected>Languages</Link>
-      <Link>Frameworks</Link>
+      <ul>
+        <ListItem selected>
+          <Link to="/languages">Languages</Link>
+        </ListItem>
+
+        <ListItem>
+          <Link to="/Frameworks">Frameworks</Link>
+        </ListItem>
+      </ul>
     </Container>
   );
 }

@@ -1,6 +1,11 @@
 import React from 'react';
+import {render} from 'react-dom';
+import {Router, Route, browserHistory} from 'react-router';
+
+
 import TopNavigator from './components/TopNavigator';
 import ListCardContainer from './containers/ListCardContainer';
+
 
 class App extends React.Component {
   constructor( props ) {
